@@ -120,18 +120,34 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+
+#Specifies additional directories to search for static files. 
+
+
 STATIC_URL = "static/"
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'user/static'),
-    os.path.join(BASE_DIR, 'resturant/static'),
-    os.path.join(BASE_DIR, 'orders/static')
-]
 
-STATIC_ROOT = BASE_DIR / "static"
 
-MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#Specifies additional directories to search for static files. 
+'''STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'user/?'),
+    os.path.join(BASE_DIR, 'resturant/?'),
+    os.path.join(BASE_DIR, 'orders/?')
+]'''
+
+#Specifies the single directory to which all static files will be collected when running collectstatic for production
+
+#uncomment for production and run python manage.py collect static 
+
+#STATIC_ROOT = BASE_DIR / "static"
+
+#Definition: MEDIA_URL is the URL that handles the media served from MEDIA_ROOT.
+#Purpose: It is used to generate the URL for accessing media files.
+#NOT needed in this project as we do not are not going to have upload feature in this specific Web application
+#MEDIA_URL = '/media/'
+
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
