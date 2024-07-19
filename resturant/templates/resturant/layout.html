@@ -4,11 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
 </head>
 <body>
+   
+    <div class="navbar">
+        <ul class="nav-list">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="order-online buttns">Order Online</button>
+            <button class="call-us buttns">Call Us</button>
+            <a href="#index"><img src="{% static 'main/img/logo.png' %}" alt="Profile" class="profile-img"></a>
+        </div>
+    </div>
     {% block body %}
-
     {% endblock body %}
 </body>
 </html>

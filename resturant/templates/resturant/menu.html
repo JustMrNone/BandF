@@ -1,0 +1,42 @@
+{% extends 'resturant/layout.html' %}
+{% load static %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+    <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
+</head>
+<body>
+
+    <div class="main-content">
+        <div class="left-sidebar">
+            <div class="cart">
+                <p>Shopping Cart</p>
+                <div class="cart-empty">
+                    <img src="empty-cart.png" alt="Empty Cart">
+                    <p>The shopping cart is empty</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-content">
+            <div class="menu">
+                <div class="menu-buttons">
+                    <button>Drinks</button>
+                    <button>Appetizers</button>
+                    <button>Sandwiches</button>
+                    <button>Pizza</button>
+                    <button>Fried Chicken</button>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Quick Search">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock body %}
